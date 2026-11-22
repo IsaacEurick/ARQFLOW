@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Briefing de projeto residencial - Wagner Rickli Eurick Arquitetura">
+  <title>Briefing Residencial | Wagner Rickli Eurick</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="briefing.css">
+  <script src="briefing.js" defer></script>
+</head>
+<body>
+  <header class="top-header">
+    <div class="brand">
+      <div class="brand-symbol">W</div>
+      <div>
+        <strong>WAGNER RICKLI EURICK</strong>
+        <span>ARQUITETURA</span>
+      </div>
+    </div>
+    <span class="header-label">BRIEFING RESIDENCIAL</span>
+  </header>
+
+  <main class="page-container">
+    <section class="intro" id="intro">
+      <span class="eyebrow">SEU PROJETO COMEÇA AQUI</span>
+      <h1>Vamos conversar sobre<br>o seu <span>novo espaço?</span></h1>
+      <p>
+        Este formulário foi desenvolvido para conhecermos melhor você,
+        sua família, sua rotina e suas expectativas para o projeto.
+        Suas respostas vão nos ajudar a criar um espaço que tenha a sua identidade.
+      </p>
+
+      <div class="intro-info">
+        <div>
+          <strong>9 etapas</strong>
+          <span>Informações organizadas</span>
+        </div>
+        <div>
+          <strong>No seu ritmo</strong>
+          <span>Você pode salvar e continuar</span>
+        </div>
+        <div>
+          <strong>Personalizado</strong>
+          <span>Projeto pensado para você</span>
+        </div>
+      </div>
+
+      <button class="btn btn-primary btn-start" id="startButton">
+        Começar briefing <span>→</span>
+      </button>
+      <p class="privacy-note">
+        Suas informações serão utilizadas pelo escritório para o desenvolvimento do projeto.
+      </p>
+    </section>
+
+    <section class="form-area hidden" id="formArea">
+      <div class="form-heading">
+        <div>
+          <span class="eyebrow">BRIEFING DO PROJETO</span>
+          <h2>Conte um pouco sobre você</h2>
+        </div>
+        <span class="save-status" id="saveStatus">Rascunho salvo neste dispositivo</span>
+      </div>
+
+      <div class="progress-area">
+        <div class="progress-label">
+          <span id="stepCounter">Etapa 1 de 9</span>
+          <strong id="progressPercent">11%</strong>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+      </div>
+
+      <div class="step-layout">
+        <aside class="step-sidebar">
+          <span class="sidebar-title">ETAPAS DO BRIEFING</span>
+          <nav id="stepNavigation"></nav>
+        </aside>
+
+        <section class="step-content">
+          <div id="stepForm"></div>
+
+          <div class="form-navigation">
+            <button type="button" class="btn btn-secondary" id="backButton">
+              ← Voltar
+            </button>
+            <button type="button" class="btn btn-primary" id="nextButton">
+              Próxima etapa →
+            </button>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="success-screen hidden" id="successScreen">
+      <div class="success-icon">✓</div>
+      <span class="eyebrow">BRIEFING FINALIZADO</span>
+      <h1>Obrigado por compartilhar<br>suas ideias!</h1>
+      <p>
+        Suas respostas foram registradas neste dispositivo.
+        Em breve, o escritório poderá utilizar essas informações
+        para dar continuidade ao desenvolvimento do seu projeto.
+      </p>
+      <p class="privacy-note">
+        Esta é uma versão de demonstração. O envio direto ao escritório
+        será ativado quando o sistema estiver conectado ao banco de dados.
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>WAGNER RICKLI EURICK | ARQUITETURA</span>
+    <span>Briefing de projeto residencial</span>
+  </footer>
+</body>
+</html>

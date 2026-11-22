@@ -1,0 +1,303 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#303236">
+    <title>Painel | Wagner Rickli Eurick Arquitetura</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="app">
+
+    <aside class="sidebar" id="sidebar">
+        <div class="brand">
+            <div class="brand-mark">W</div>
+            <div class="brand-name">
+                <strong>WAGNER RICKLI EURICK</strong>
+                <span>ARQUITETURA</span>
+            </div>
+        </div>
+
+        <div class="menu-label">MENU PRINCIPAL</div>
+
+        <nav class="navigation">
+            <button class="nav-item active" data-page="dashboard">
+                <span class="nav-icon">▦</span>
+                <span>Visão geral</span>
+            </button>
+            <button class="nav-item" data-page="projects">
+                <span class="nav-icon">▤</span>
+                <span>Projetos</span>
+            </button>
+            <button class="nav-item" data-page="clients">
+                <span class="nav-icon">♙</span>
+                <span>Clientes</span>
+            </button>
+            <button class="nav-item" data-page="briefings">
+                <span class="nav-icon">☷</span>
+                <span>Briefings</span>
+            </button>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="office-card">
+                <div class="office-avatar">WR</div>
+                <div>
+                    <strong>Wagner Rickli Eurick</strong>
+                    <span>Administrador</span>
+                </div>
+            </div>
+            <p class="sidebar-version">PAINEL DO ESCRITÓRIO · 1.0</p>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <button class="mobile-menu" id="mobileMenu" aria-label="Abrir menu">☰</button>
+            <div class="breadcrumb">
+                Escritório <span>/</span> <strong id="breadcrumbTitle">Visão geral</strong>
+            </div>
+            <div class="topbar-right">
+                <span class="status-dot"></span>
+                <span class="online-label">Painel de demonstração</span>
+                <div class="top-avatar">WR</div>
+            </div>
+        </header>
+
+        <div class="page-content">
+
+            <!-- DASHBOARD -->
+            <section class="page active" id="page-dashboard">
+                <div class="welcome-row">
+                    <div>
+                        <p class="eyebrow">PAINEL DO ESCRITÓRIO</p>
+                        <h1>Visão geral</h1>
+                        <p class="subtitle">Acompanhe seus projetos e briefings em um só lugar.</p>
+                    </div>
+                    <button class="primary-button" id="newProjectButton">
+                        <span>＋</span> Novo projeto
+                    </button>
+                </div>
+
+                <div class="stats-grid">
+                    <article class="stat-card">
+                        <div class="stat-top">
+                            <span>Projetos cadastrados</span>
+                            <span class="stat-icon">▤</span>
+                        </div>
+                        <strong id="totalProjects">0</strong>
+                        <small>Projetos no painel</small>
+                    </article>
+
+                    <article class="stat-card">
+                        <div class="stat-top">
+                            <span>Clientes</span>
+                            <span class="stat-icon">♙</span>
+                        </div>
+                        <strong id="totalClients">0</strong>
+                        <small>Clientes cadastrados</small>
+                    </article>
+
+                    <article class="stat-card">
+                        <div class="stat-top">
+                            <span>Briefings pendentes</span>
+                            <span class="stat-icon">◷</span>
+                        </div>
+                        <strong id="pendingBriefings">0</strong>
+                        <small>Aguardando preenchimento</small>
+                    </article>
+
+                    <article class="stat-card">
+                        <div class="stat-top">
+                            <span>Briefings concluídos</span>
+                            <span class="stat-icon">✓</span>
+                        </div>
+                        <strong id="completedBriefings">0</strong>
+                        <small>Prontos para consulta</small>
+                    </article>
+                </div>
+
+                <div class="content-grid">
+                    <section class="panel projects-panel">
+                        <div class="panel-heading">
+                            <div>
+                                <h2>Projetos recentes</h2>
+                                <p>Acompanhe os últimos projetos cadastrados.</p>
+                            </div>
+                            <button class="text-button" data-goto="projects">Ver todos →</button>
+                        </div>
+
+                        <div id="recentProjects" class="projects-list">
+                            <div class="empty-state">
+                                <div class="empty-icon">▤</div>
+                                <strong>Nenhum projeto cadastrado</strong>
+                                <p>Comece cadastrando o primeiro projeto do escritório.</p>
+                                <button class="primary-button small" id="emptyNewProject">Cadastrar projeto</button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="panel quick-panel">
+                        <div class="panel-heading">
+                            <div>
+                                <h2>Acesso rápido</h2>
+                                <p>Atalhos para suas atividades.</p>
+                            </div>
+                        </div>
+                        <button class="quick-action" data-goto="clients">
+                            <span class="quick-icon">♙</span>
+                            <span><strong>Clientes</strong><small>Consultar cadastros</small></span>
+                            <span class="quick-arrow">→</span>
+                        </button>
+                        <button class="quick-action" data-goto="projects">
+                            <span class="quick-icon">▤</span>
+                            <span><strong>Projetos</strong><small>Organizar projetos</small></span>
+                            <span class="quick-arrow">→</span>
+                        </button>
+                        <button class="quick-action" data-goto="briefings">
+                            <span class="quick-icon">☷</span>
+                            <span><strong>Briefings</strong><small>Acompanhar respostas</small></span>
+                            <span class="quick-arrow">→</span>
+                        </button>
+                    </section>
+                </div>
+
+                <div class="notice">
+                    <span class="notice-icon">i</span>
+                    <p><strong>Ambiente inicial:</strong> os dados desta versão ficam salvos somente neste navegador. Ainda não existe envio de briefings para clientes.</p>
+                </div>
+            </section>
+
+            <!-- PROJETOS -->
+            <section class="page" id="page-projects">
+                <div class="welcome-row">
+                    <div>
+                        <p class="eyebrow">GESTÃO DO ESCRITÓRIO</p>
+                        <h1>Projetos</h1>
+                        <p class="subtitle">Cadastre e acompanhe os projetos residenciais.</p>
+                    </div>
+                    <button class="primary-button" id="projectsNewButton">＋ Novo projeto</button>
+                </div>
+                <section class="panel">
+                    <div class="panel-heading">
+                        <div>
+                            <h2>Todos os projetos</h2>
+                            <p id="projectsCount">0 projetos cadastrados</p>
+                        </div>
+                    </div>
+                    <div id="allProjects" class="projects-list">
+                        <div class="empty-state">
+                            <div class="empty-icon">▤</div>
+                            <strong>Nenhum projeto por aqui</strong>
+                            <p>Os projetos cadastrados aparecerão nesta área.</p>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <!-- CLIENTES -->
+            <section class="page" id="page-clients">
+                <div class="welcome-row">
+                    <div>
+                        <p class="eyebrow">RELACIONAMENTO</p>
+                        <h1>Clientes</h1>
+                        <p class="subtitle">Consulte os clientes vinculados aos projetos.</p>
+                    </div>
+                </div>
+                <section class="panel">
+                    <div class="panel-heading">
+                        <div>
+                            <h2>Clientes cadastrados</h2>
+                            <p>Os clientes serão adicionados ao cadastrar um projeto.</p>
+                        </div>
+                    </div>
+                    <div id="allClients" class="projects-list">
+                        <div class="empty-state">
+                            <div class="empty-icon">♙</div>
+                            <strong>Nenhum cliente cadastrado</strong>
+                            <p>Cadastre um projeto para adicionar o primeiro cliente.</p>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <!-- BRIEFINGS -->
+            <section class="page" id="page-briefings">
+                <div class="welcome-row">
+                    <div>
+                        <p class="eyebrow">COLETA DE INFORMAÇÕES</p>
+                        <h1>Briefings</h1>
+                        <p class="subtitle">Acompanhe o preenchimento dos briefings residenciais.</p>
+                    </div>
+                </div>
+                <section class="panel">
+                    <div class="panel-heading">
+                        <div>
+                            <h2>Briefings dos projetos</h2>
+                            <p>Visualize a situação de cada briefing.</p>
+                        </div>
+                    </div>
+                    <div id="allBriefings" class="projects-list">
+                        <div class="empty-state">
+                            <div class="empty-icon">☷</div>
+                            <strong>Nenhum briefing disponível</strong>
+                            <p>Os briefings dos projetos aparecerão nesta área.</p>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+        </div>
+    </main>
+</div>
+
+<!-- MODAL NOVO PROJETO -->
+<div class="modal-overlay" id="projectModal">
+    <div class="modal">
+        <div class="modal-header">
+            <div>
+                <p class="eyebrow">CADASTRO</p>
+                <h2>Novo projeto</h2>
+                <p>Preencha as informações iniciais do cliente.</p>
+            </div>
+            <button class="close-modal" id="closeModal" aria-label="Fechar">×</button>
+        </div>
+
+        <form id="projectForm">
+            <label for="clientName">Nome do cliente *</label>
+            <input type="text" id="clientName" placeholder="Ex.: João da Silva" required>
+
+            <label for="clientEmail">E-mail do cliente</label>
+            <input type="email" id="clientEmail" placeholder="cliente@email.com">
+
+            <label for="projectName">Nome do projeto *</label>
+            <input type="text" id="projectName" placeholder="Ex.: Residência Silva" required>
+
+            <label for="projectLocation">Localização</label>
+            <input type="text" id="projectLocation" placeholder="Cidade / Estado">
+
+            <label for="projectType">Tipo de projeto</label>
+            <select id="projectType">
+                <option value="Residencial">Residencial</option>
+                <option value="Reforma residencial">Reforma residencial</option>
+                <option value="Interiores residenciais">Interiores residenciais</option>
+            </select>
+
+            <div class="form-actions">
+                <button type="button" class="secondary-button" id="cancelModal">Cancelar</button>
+                <button type="submit" class="primary-button">Salvar projeto</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
